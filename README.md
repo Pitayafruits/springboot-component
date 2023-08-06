@@ -7,3 +7,9 @@
 </br>
 进而有了这个仓库里的项目或者说是模板吧，这个项目可以自己独立运行（在微服务架构下可以用），也可以在单体项目中直接通过pom引入的方式，然后简单的配置一下，实现“开箱即用”。
 # 注意事项
+在单体项目中引入pom时需要配置启动类的扫描路径。
+```
+//根据自己的设定修改
+@ComponentScan(basePackages = {"com.pitayafruit"})
+@MapperScan(basePackages = {"com.pitayafruit.**.mapper"})
+```
